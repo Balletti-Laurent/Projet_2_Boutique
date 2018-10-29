@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/styleL.css">
+  <link rel="stylesheet" href="assets/css/styleA.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <script src="assets/js/jquery-3.2.1.js"></script>
+  <!--<script src="assets/jquery/jquery.js"></script>-->
+  <title>Boutique</title>
+</head>
+<header>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" ><img src="assets/images/logo.png" width="60px" alt="logo"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="indexL.html">Boutique</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="indexC.html">Panier</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<body>
+  <!--Première ligne d'articles-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Déguisement De Faucheuse</h5>
+          <img src="assets/images/faucheuse-reaper.jpg" class="img-fluid" id="reaper" value="10">
+          <h5 class="centerText">10 €</h5>
+          <label class="col-md-3">Qte</label><input type="number" min="1" max="10" id="reaperQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning" onclick="clickPanier()">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Déguisement Freddy</h5>
+          <img src="assets/images/Freddy.jpg" class="img-fluid" id="freddy" valeur="10">
+          <h5 class="centerText">10 €</h5>
+          <label class="col-md-3">Qte</label><input type="number" min="1" max="10" id="freddyQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Déguisement Harry Potter</h5>
+          <img src="assets/images/Potter.jpg" class="img-fluid" id="potter" valeur="10">
+          <h5 class="centerText">10 €</h5>
+          <label class="col-md-3">Qte</label><input type="number" min="1" max="10" id="potterQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Déguisement Muerte</h5>
+          <img src="assets/images/Muerte.jpg" class="img-fluid" id="muerte" valeur="10">
+          <h5 class="centerText">10 €</h5>
+          <label class="col-md-3">Qte</label><input type="number" min="1" max="10" id="muerteQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!--Deuxième ligne d'articles-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Déguisement D'infirmière</h5>
+          <img src="assets/images/Infirmière-nurse.jpg" class="img-fluid" id="nurse" value="10">
+          <h5 class="centerText">10 €</h5>
+          <label class="col-md-3" >Qte</label><input type="number" min="1" max="10" id="nurseQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning" onclick="ajouter()">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Déguisement De Sorcière Bleu</h5>
+          <img src="assets/images/SorcièreBleu-blueWitch.jpg" class="img-fluid" id="blueWitch" value="10">
+          <h5 class="centerText">10 €</h5>
+          <label class="col-md-3">Qte</label><input type="number" min="1" max="10" id="blueWitchQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Déguisement De Sorcière Violet</h5>
+          <img src="assets/images/SorcièreViolete-purpleWitch.jpg" class="img-fluid" id="purpleWitch" value="10">
+          <h5 class="centerText">10 €</h5>
+          <label class="col-md-3">Qte</label><input type="number" min="1" max="10" id="purpleWitchQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Masque De Citrouille</h5>
+          <img src="assets/images/MasqueCitrouille-pumpkinMask.jpg" class="img-fluid" id="pumpkinMask" value="5">
+          <h5 class="centerText">5 €</h5>
+          <label class="col-md-3">Qte</label><input type="number" min="1" max="10" id="pumpkinMaskQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!--Troisième ligne d'articles-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Masque De Clown</h5>
+          <img src="assets/images/Masqueclown-clownMask.jpg" class="img-fluid" id="clownMask" value="5">
+          <h5 class="centerText">5 €</h5>
+          <label class="col-md-3" >Qte</label><input type="number" min="1" max="10" id="clownMaskQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning" onclick="ajouter()">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Masque De Monstre</h5>
+          <img src="assets/images/MasquedeMonstre-monsterMask.jpg" class="img-fluid" id="monsterMask" value="5">
+          <h5 class="centerText">5 €</h5>
+          <label class="col-md-3">Qte</label><input type="number" min="1" max="10" id="monsterMaskQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Masque De Loup-garou</h5>
+          <img src="assets/images/MasqueLoup-wolfMask.jpg" class="img-fluid" id="wolfMask" value="5">
+          <h5 class="centerText">5 €</h5>
+          <label class="col-md-3">Qte</label><input type="number" min="1" max="10" id="wolfMaskQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Masque De Poupée</h5>
+          <img src="assets/images/MasquePoupée-dollMask.jpg" class="img-fluid" id="dollMask" value="5">
+          <h5 class="centerText">5 €</h5>
+          <label class="col-md-3">Qte</label><input type="number" min="1" max="10" id="dollMaskQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!--Quatrième ligne d'articles-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Toile d'Areignée</h5>
+          <img src="assets/images/Areignés-spider.jpg" class="img-fluid" id="spider" value="5">
+          <h5 class="centerText">5 €</h5>
+          <label class="col-md-3" >Qte</label><input type="number" min="1" max="10" id="spiderQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning" onclick="ajouter()">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Autocolants Citrouilles</h5>
+          <img src="assets/images/Autocolant-stikers.jpg" class="img-fluid" id="stikers" value="5">
+          <h5 class="centerText">5 €</h5>
+          <label class="col-md-3">Qte</label><input type="number" min="1" max="10" id="stikersQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Baguette Magique</h5>
+          <img src="assets/images/Baguette-Baguette.jpg" class="img-fluid" id="baguette" value="5">
+          <h5 class="centerText">5 €</h5>
+          <label class="col-md-3">Qte</label><input type="number" min="1" max="10" id="baguetteQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Crane Argenté</h5>
+          <img src="assets/images/CraneArgent-silverSkull.jpg" class="img-fluid" id="silverSkull" value="5">
+          <h5 class="centerText">5 €</h5>
+          <label class="col-md-3">Qte</label><input type="number" min="1" max="10" id="silverSkullQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!--Cinquième ligne d'articles-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Crâne</h5>
+          <img src="assets/images/Crane-skull.jpg" class="img-fluid" id="skull" value="5">
+          <h5 class="centerText">5 €</h5>
+          <label class="col-md-3" >Qte</label><input type="number" min="1" max="10" id="skullQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning" onclick="ajouter()">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Dents De Vampires</h5>
+          <img src="assets/images/dentier-denture.jpg" class="img-fluid" id="denture" value="5">
+          <h5 class="centerText">5 €</h5>
+          <label class="col-md-3">Qte</label><input type="number" min="1" max="10" id="dentureQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Insectes</h5>
+          <img src="assets/images/Insectes-insects.jpg" class="img-fluid" id="insects" value="5">
+          <h5 class="centerText">5 €</h5>
+          <label class="col-md-3">Qte</label><input type="number" min="1" max="10" id="insectsQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="borderItems">
+          <h5 class="centerText">Squelette</h5>
+          <img src="assets/images/Squelette-skeleton.jpg" class="img-fluid" id="skeleton" value="5">
+          <h5 class="centerText">5 €</h5>
+          <label class="col-md-3">Qte</label><input type="number" min="1" max="10" id="skeletonQte" style="width:50px"></input>
+          <button type="button" class="btn btn-outline-warning">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="assets/js/projetZ.js"></script>
+</body>
+</html>

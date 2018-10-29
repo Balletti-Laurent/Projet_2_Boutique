@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Panier HTML5 + JavaScript</title>
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/styleL.css">
+  <link rel="stylesheet" href="assets/css/styleA.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script type="text/javascript" src="assets/js/projet.js"></script>
+</head>
+<header>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" ><img src="assets/images/logo.png" width="60px" alt="logo"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="indexL.html">Boutique</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="indexC.html">Panier</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<body>
+  <section class="container">
+    <div class="row">
+      <article class="col col-sm-12 col-xs-12 col-md-12 col-xl-12">
+        <legend>Contenu du panier</legend>
+        <table id="tableau" class="table">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Qte</th>
+              <th>Prix unitaire</th>
+              <th>Prix de la ligne</th>
+              <th>Supprimer</th>
+            </tr>
+          </thead>
+        </table>
+        <br><label>Prix du panier total</label> : <label id = "prixTotal"></label>
+        <label id = "nbreLignes" hidden>0</label>
+      </article>
+    </section>
+  </div>
+  <section class="container">
+    <div class="row">
+      <article class="well form-inline pull-left col-lg-5">
+        <label class="col-lg-5">Code de réduction</label><input type = "text" id = "réduction" style="width:120px"></input><br><br>
+        <br><a class="nav-link" type="button"  href="indexA.html">Valider</a>
+      </article>
+    </section>
+  </div>
+  <script src="assets/js/projetZ.js"></script>
+</body>
+</html>
